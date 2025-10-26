@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Survey & Interactivity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌌 The Cosmic Explorer's Survey 🪐</h1>
+        <p>A quick look into your celestial interests.</p>
+    </header>
+
+    <main>
+        <section class="survey-form-section">
+            <h2>1. Cosmic Interest Form</h2>
+            <form id="cosmicSurveyForm">
+                <div class="form-group">
+                    <label for="explorerName">Explorer Name:</label>
+                    <input type="text" id="explorerName" name="explorerName" placeholder="Your celestial callsign" required>
+                    <div id="nameError" class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="explorerEmail">Explorer Email:</label>
+                    <input type="text" id="explorerEmail" name="explorerEmail" placeholder="e.g., starman@galaxy.com" required>
+                    <div id="emailError" class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="favoritePlanet">Favorite Celestial Body (must be a planet or moon):</label>
+                    <input type="text" id="favoritePlanet" name="favoritePlanet" placeholder="e.g., Jupiter, Titan" required>
+                    <div id="planetError" class="error-message"></div>
+                </div>
+                
+                <button type="submit" id="submitFormButton">Submit Survey Data</button>
+                <p id="formFeedback" class="feedback-message"></p>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="mode-toggle-section">
+            <h2>2. Star-Gazing Mode</h2>
+            <p>Switch between day and night themes for optimal viewing!</p>
+            <button id="modeToggleButton">Toggle Dark Mode</button>
+        </section>
+
+        <hr>
+
+        <section class="star-counter-section">
+            <h2>3. Star Count Calculator</h2>
+            <p>Adjust the slider to estimate your star count in the visible sky:</p>
+            <input type="range" id="starCountSlider" min="100" max="10000" value="5000" step="100">
+            <p>Estimated Visible Stars: <span id="starCountDisplay">5,000</span></p>
+        </section>
+
+        <hr>
+
+        <section class="gravity-section">
+            <h2>4. Gravity Well Jump Height</h2>
+            <p>Enter your jump height on Earth (in meters) to see how high you could jump on Jupiter (with $2.5 \times$ Earth's gravity).</p>
+            <div class="form-group">
+                <label for="earthJumpHeight">Earth Jump Height (m):</label>
+                <input type="number" id="earthJumpHeight" min="0" value="0.5" step="0.1">
+            </div>
+            <button id="calculateGravityButton">Calculate Jupiter Jump</button>
+            <p>Jupiter Jump Height: <span id="jupiterJumpResult"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cosmic Simulations Inc.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
